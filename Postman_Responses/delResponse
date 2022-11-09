@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="/add" method="post">
+                <h1>Enter Task Details</h1>
+                <input type="text" name="taskName" id="taskName" placeholder="Enter Task Name" required>
+                <input type="text" name="taskDescription" id="taskDescription" placeholder="Enter Description">
+                <input type="text" name="taskAssign" id="taskAssign" placeholder="Enter Assignee Name">
+                <input type="date" name="dueDate" id="dueDate" placeholder="Enter Due Date">
+
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="data">
+        <table class="tasks">
+             
+            <tr id="Heading">
+                <td>ID</td>
+                <td>Task Name</td>
+                <td>Description</td>
+                <td>Assigned to</td>
+                <td>Due Date</td>
+                <td>Completed</td>
+            </tr>
+             
+        
+            <form action="/delete" method="post">
+
+                <tr>
+                    <td><input type="text" class="noBorder" name="id" value="636a4a8d2a65619a861cc53e" readonly></td>
+                    <td>Button Editing</td>
+                    <td>Make the button&#39;s border smooth</td>
+                    <td>Arjun</td>
+                    <td>2022-12-18</td>
+                    <td>true</td>
+
+                
+                 
+                <td class="noBorder"><button class="deleteButton" type="submit" >Delete Task</button></td>
+            </tr>
+            </form>
+        
+            <form action="/delete" method="post">
+
+                <tr>
+                    <td><input type="text" class="noBorder" name="id" value="636a4e4f2a65619a861cc55e" readonly></td>
+                    <td>UI Optimization</td>
+                    <td>Optimize the UI for mobile</td>
+                    <td>Sanjay</td>
+                    <td>2023-01-13</td>
+                    <td>false</td>
+
+                
+                    <td class="noBorder"><button type="submit" class="completeButton" formaction="/update">Mark as Complete</button></td>
+                 
+                <td class="noBorder"><button class="deleteButton" type="submit" >Delete Task</button></td>
+            </tr>
+            </form>
+          
+    </table>
+    </div>
+
+
+    <div class="finding">
+        <h1>Search tasks by Assignee Name</h1>
+        <form action="/findByName" method="post">
+            <div class="findField">
+            <input type="text" class="findByName" id="findByName" name="findByName" placeholder="Enter Name">
+            <button type="submit">Find by Name</button>
+        </div>
+            
+               
+            
+        </form>
+    </div>
+    
+</body>
+</html>
