@@ -19,5 +19,5 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 app.use(routes)
 
 app.listen(port, function () {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App listening on port ${port}`)
 })
